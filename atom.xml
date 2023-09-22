@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>三夏</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2023-09-22T05:36:48.532Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>三夏</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>vim的基本操作</title>
+    <link href="http://example.com/posts/52047.html"/>
+    <id>http://example.com/posts/52047.html</id>
+    <published>2023-09-22T05:17:50.000Z</published>
+    <updated>2023-09-22T05:36:48.532Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;是一个流行在终端的编辑器，Vim 是从 vi</summary>
+        
+      
+    
+    
+    
+    <category term="关于Linux" scheme="http://example.com/categories/%E5%85%B3%E4%BA%8ELinux/"/>
+    
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="vim" scheme="http://example.com/tags/vim/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>termux的使用</title>
+    <link href="http://example.com/posts/8927.html"/>
+    <id>http://example.com/posts/8927.html</id>
+    <published>2023-09-18T13:34:08.000Z</published>
+    <updated>2023-09-20T07:34:21.868Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h3 id=&quot;介绍&quot;&gt;&lt;a href=&quot;#介绍&quot; class=&quot;headerlink&quot; title=&quot;介绍&quot;&gt;&lt;/a&gt;介绍&lt;/h3&gt;&lt;blockquote&gt;
+&lt;p&gt;termux 是一个安卓终端模拟器，具有 Linux 环境，具有最小基本系统，使用 APT</summary>
+        
+      
+    
+    
+    
+    <category term="关于Linux" scheme="http://example.com/categories/%E5%85%B3%E4%BA%8ELinux/"/>
+    
+    
+    <category term="工具" scheme="http://example.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="termux" scheme="http://example.com/tags/termux/"/>
+    
+  </entry>
+  
+</feed>
