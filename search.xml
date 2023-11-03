@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title>ProjectVoid详解</title>
+      <link href="/posts/61401.html"/>
+      <url>/posts/61401.html</url>
+      
+        <content type="html"><![CDATA[<h2 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h2><blockquote><p>该项目通过其他开源项目衍生而来，通过 QtC++框架实现了一个类似黎明前为 20 分钟的肉鸽游戏，可以通过学习该项目来巩固和提高 qt 编程能力</p></blockquote><h2 id="项目地址"><a href="#项目地址" class="headerlink" title="项目地址"></a>项目地址</h2><p><a href="https://github.com/Three-summers/ProjectVoid/tree/master">github</a><br>可以向该项目提 pr 来帮助我发现该项目的 bug 并修改</p><h2 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h2><p>在项目中找到 download 目录，下载其中的压缩包<br><a href="https://github.com/Three-summers/ProjectVoid/tree/master/ProjectVoid-master/download">地址</a><br>或者<br><a href="https://pan.baidu.com/s/1R8XjuDZySRVoqL5CWoobUg">百度网盘</a><br>提取码：rs2a</p><h2 id="解释源码"><a href="#解释源码" class="headerlink" title="解释源码"></a>解释源码</h2><p>注：+为 public，@为 protected，-为 private，%为 signals</p><h3 id="子弹类"><a href="#子弹类" class="headerlink" title="子弹类"></a>子弹类</h3><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  classDiagrambulletBase &lt;|-- bulletDmrbulletBase &lt;|-- bulletEnemybulletBase &lt;|-- bulletSmartbulletBase &lt;|-- bulletSmgbulletBase &lt;|-- bulletShotgunclass bulletBase {+explicit BulletBase()+static QTimer #42; m_timer_static@void enemyHitCheck()@void move()@QGraphicsScene #42; m_scene@qreal m_speed@qreal m_damage@int m_penetration@QList&lt;EnemyBase#42;&gt; hurt_enemy_list@int hurt_count}class bulletDmr {+explicit BulletDmr()}class bulletEnemy{+explicit BulletEnemy()-void playerHitCheck()}class bulletSmart{+explicit BulletSmart()-void track()}class bulletSmg{+explicit BulletSmg()}class bulletShotgun{+explicit BulletShotgun()}  </pre></div><h3 id="怪物类"><a href="#怪物类" class="headerlink" title="怪物类"></a>怪物类</h3><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  classDiagramenemyBase &lt;|-- enemyBotenemyBase &lt;|-- enemyExplosiveBaseenemyBase &lt;|-- enemyRangedDroneenemyExplosiveBase &lt;|-- enemyExplosiveBallenemyRangedDrone &lt;|-- enemyRangedDroneEliteenemyBot &lt;|-- enemyBotEliteclass enemyBase{+explicit EnemyBase()+void hurt()+static QTimer #42;m_timer_static+static QSoundEffect #42;sfx_enemy_hurt%void enemyDeath()@Player *m_player@qreal speed@qreal health@int xp@QGraphicsScene #42;m_scene@QTimer hurt_timer@bool is_hurt@virtual void death()@virtual void mobMove()@void hitBoxCheck()@virtual void load() &#x3D; 0@void hurt_reload()@static QRectF pilebounds1@static QRectF pilebounds2@static QRectF pilebounds3@static QRectF pilebounds4@static QRectF pilebounds5}class enemyBot{+explicit EnemyBot(）-void load() override-QMovie #42;m_movie}class enemyBotElite{+explicit EnemyBotElite()-void load() override-QMoive #42;m_movie}class enemyExplosiveBase{+explicit EnemyExplosiveBase()@qreal explosion_range@qreal explosion_damage@virtual void explode() &#x3D; 0@void death() override@void enemyHitCheck()@QSoundEffect *sfx_explosion}class enemyExplosiveBall{explicit EnemyExplosiveBall()-void load() override-void explode()-QPixmap pix-QMovie #42;fx_explosion}class enemyRangedDrone{+explicit EnemyRangedBase()@void mobMove() override@virtual void attack() &#x3D; 0@void angleChange()@qreal angle@int angle_change_count@int angle_change_ceil}class enemyRangedDroneElite{+explicit EnemyRangedDroneElite()-void load() override-void attack() override-int attack_count-const int attack_ceil-QPixmap pix}  </pre></div><h3 id="武器类"><a href="#武器类" class="headerlink" title="武器类"></a>武器类</h3><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  classDiagramweaponMod &lt;|-- weaponBaseweaponBase &lt;|-- weaponDmrweaponBase &lt;|-- weaponShotgunweaponBase &lt;|-- weaponSmartweaponBase &lt;|-- weaponSmgclass weaponMod{+explicit WeaponMod()+void resetButton()%void weaponSelected()-int sign-int w_index-QString m_weapon-QGraphicsSelectiveButton *icon-QGraphicsTextItem *desc-QGraphicsScene \*m_scene-void hoverEnter()-void hoverLeave()-void mouseClick()-void setWeapon()}class weaponDmr{+explicit WeaponDmr()+void fire()}class weaponBase{+explicit EnemyBase()+void hurt()+static QTimer #42;m_timer_static+static QSoundEffect #42;sfx_enemy_hurt%void enemyDeath()@Player #42;m_player@qreal speed@qreal health@int xp@QGraphicsScene #42;m_scene@QTimer hurt_timer@bool is_hurt@virtual void death()@virtual void mobMove()@void hitBoxCheck()@virtual void load() &#x3D; 0@void hurt_reload()@static QRectF pilebounds1@static QRectF pilebounds2@static QRectF pilebounds3@static QRectF pilebounds4@static QRectF pilebounds5}class weaponShotgun{+explicit WeaponShotgun()+void fire() override}class weaponSmart{+explicit WeaponSmart()+void fire() override}class weaponSmg{+explicit WeaponSmg()+void fire() override}  </pre></div><p>注：该 weaponMod 类为接口类</p><h3 id="按钮类"><a href="#按钮类" class="headerlink" title="按钮类"></a>按钮类</h3><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  classDiagramqGraphicsButton &lt;|-- qGraphicsSelectiveButtonclass qGraphicsButton{+QGraphicsButton()%void hoverEnter()%void hoverLeave()%void mouseClick()@void hoverEnterEvent() override@void hoverLeaveEvent() override@void mouseClickEvent() override@QString ic_path@bool is_hovered &#x3D; false@bool is_pressed &#x3D; false}class qGraphicsSelectiveButton{+explicit QGraphicsSelectiveButton()+void resetStatus()%void selected()@void hoverEnterEvent() override@void hoverLeaveEvent() override@void mousePressEvent() override@void mouseReleaseEvent() override-bool is_selected &#x3D; false}  </pre></div><h3 id="其他类"><a href="#其他类" class="headerlink" title="其他类"></a>其他类</h3><div class="mermaid-wrap"><pre class="mermaid-src" hidden>  graph LRenemyBase --&gt; bulletBasebulletBase --&gt;weaponBaseplayer --&gt; weaponBaseplayer --&gt; enemyBaseplayer --&gt; expexp --&gt; enemyBasearchiveMod --&gt; startMenushopItem --&gt; startMenuweaponMod --&gt; startMenuqGraphicsButton --&gt; upgradeModplayer --&gt; upgradeModweaponBase --&gt; upgradeModstartMenu --&gt; gameWidgetgameEngine --&gt; gameWidgetheartLabel --&gt; gameEngineplayer --&gt; gameEngineweaponBase --&gt; gameEnginearchiveMod --&gt; gameEngineupgradeMod --&gt; gameEngineexp --&gt; gameEnginebulletBase --&gt; gameEngineenemy* --&gt; gameEngineweapon* --&gt; gameEngineqGraphicsButton --&gt; archiveModgameWidget --&gt; mainweaponBase --&gt; weapon*enemyBase --&gt; enemy*  </pre></div><p>基本逻辑如上</p><h2 id="可更新问题"><a href="#可更新问题" class="headerlink" title="可更新问题"></a>可更新问题</h2><h3 id="在暂停-升级时会卡顿"><a href="#在暂停-升级时会卡顿" class="headerlink" title="在暂停&#x2F;升级时会卡顿"></a>在暂停&#x2F;升级时会卡顿</h3><h3 id="存档时怪物位置无法存储问题"><a href="#存档时怪物位置无法存储问题" class="headerlink" title="存档时怪物位置无法存储问题"></a>存档时怪物位置无法存储问题</h3><h3 id="在升级时再按暂停游戏闪退"><a href="#在升级时再按暂停游戏闪退" class="headerlink" title="在升级时再按暂停游戏闪退"></a>在升级时再按暂停游戏闪退</h3><h3 id="搜索技能时可以通过使用哈希表来优化速度"><a href="#搜索技能时可以通过使用哈希表来优化速度" class="headerlink" title="搜索技能时可以通过使用哈希表来优化速度"></a>搜索技能时可以通过使用哈希表来优化速度</h3><h3 id="添加本地排行榜"><a href="#添加本地排行榜" class="headerlink" title="添加本地排行榜"></a>添加本地排行榜</h3><h3 id="添加网络排行榜"><a href="#添加网络排行榜" class="headerlink" title="添加网络排行榜"></a>添加网络排行榜</h3>]]></content>
+      
+      
+      <categories>
+          
+          <category> 项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 游戏 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>vim的基本操作</title>
       <link href="/posts/52047.html"/>
       <url>/posts/52047.html</url>
@@ -20,9 +45,9 @@
       
         <tags>
             
-            <tag> 工具 </tag>
-            
             <tag> vim </tag>
+            
+            <tag> 工具 </tag>
             
         </tags>
       
