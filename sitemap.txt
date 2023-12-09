@@ -1,3 +1,4 @@
+http://example.com/posts/46563.html
 http://example.com/posts/61401.html
 http://example.com/posts/52047.html
 http://example.com/posts/8927.html
@@ -6,8 +7,10 @@ http://example.com/categories/index.html
 http://example.com/about/index.html
 http://example.com/
 http://example.com/tags/%E6%B8%B8%E6%88%8F/
+http://example.com/tags/python/
 http://example.com/tags/%E5%B7%A5%E5%85%B7/
 http://example.com/tags/termux/
 http://example.com/tags/vim/
 http://example.com/categories/%E9%A1%B9%E7%9B%AE/
+http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/
 http://example.com/categories/%E5%85%B3%E4%BA%8ELinux/

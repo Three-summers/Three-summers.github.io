@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-11-03T12:58:32.786Z</updated>
+  <updated>2023-12-09T05:57:35.785Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -15,6 +15,32 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>正则表达式</title>
+    <link href="http://example.com/posts/46563.html"/>
+    <id>http://example.com/posts/46563.html</id>
+    <published>2023-12-09T05:53:41.000Z</published>
+    <updated>2023-12-09T05:57:35.785Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;注：使用 python 正则表达式库&lt;code&gt;re&lt;/code&gt;实现，部分是由 chatGPT 实现&lt;/p&gt;
+&lt;h1 id=&quot;元字符&quot;&gt;&lt;a href=&quot;#元字符&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="学习笔记" scheme="http://example.com/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    
+    
+    <category term="python" scheme="http://example.com/tags/python/"/>
+    
+  </entry>
   
   <entry>
     <title>ProjectVoid详解</title>
