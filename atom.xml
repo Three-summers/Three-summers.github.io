@@ -6,7 +6,7 @@
   <link href="http://example.com/atom.xml" rel="self"/>
   
   <link href="http://example.com/"/>
-  <updated>2023-12-09T05:57:35.785Z</updated>
+  <updated>2024-01-23T09:30:13.397Z</updated>
   <id>http://example.com/</id>
   
   <author>
@@ -17,11 +17,39 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>html to markdown 油猴脚本</title>
+    <link href="http://example.com/posts/22372.html"/>
+    <id>http://example.com/posts/22372.html</id>
+    <published>2024-01-23T09:22:32.000Z</published>
+    <updated>2024-01-23T09:30:13.397Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;目标&quot;&gt;&lt;a href=&quot;#目标&quot; class=&quot;headerlink&quot; title=&quot;目标&quot;&gt;&lt;/a&gt;目标&lt;/h1&gt;&lt;p&gt;在手机上实现 html 转为 markdown 格式，并将其存入 obsidian 来进行长期消化。&lt;/p&gt;
+&lt;h1</summary>
+        
+      
+    
+    
+    
+    <category term="项目" scheme="http://example.com/categories/%E9%A1%B9%E7%9B%AE/"/>
+    
+    
+    <category term="油猴脚本" scheme="http://example.com/tags/%E6%B2%B9%E7%8C%B4%E8%84%9A%E6%9C%AC/"/>
+    
+    <category term="js" scheme="http://example.com/tags/js/"/>
+    
+  </entry>
+  
+  <entry>
     <title>正则表达式</title>
     <link href="http://example.com/posts/46563.html"/>
     <id>http://example.com/posts/46563.html</id>
     <published>2023-12-09T05:53:41.000Z</published>
-    <updated>2023-12-09T05:57:35.785Z</updated>
+    <updated>2023-12-09T05:58:14.019Z</updated>
     
     
       
